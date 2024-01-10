@@ -1,0 +1,11 @@
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad6B\Actividad6B\bin\Debug\Actividad6B.exe.config
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad6B\Actividad6B\bin\Debug\Actividad6B.exe
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad6B\Actividad6B\bin\Debug\Actividad6B.pdb
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad6B\Actividad6B\obj\Debug\Actividad6B.csproj.AssemblyReference.cache
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad6B\Actividad6B\obj\Debug\Actividad6B.csproj.SuggestedBindingRedirects.cache
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad6B\Actividad6B\obj\Debug\Actividad6B.Form1.resources
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad6B\Actividad6B\obj\Debug\Actividad6B.Properties.Resources.resources
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad6B\Actividad6B\obj\Debug\Actividad6B.csproj.GenerateResource.cache
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad6B\Actividad6B\obj\Debug\Actividad6B.csproj.CoreCompileInputs.cache
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad6B\Actividad6B\obj\Debug\Actividad6B.exe
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad6B\Actividad6B\obj\Debug\Actividad6B.pdb

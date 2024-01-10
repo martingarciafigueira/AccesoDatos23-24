@@ -1,0 +1,15 @@
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\bin\Debug\net6.0\Actividad8.exe
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\bin\Debug\net6.0\Actividad8.deps.json
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\bin\Debug\net6.0\Actividad8.runtimeconfig.json
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\bin\Debug\net6.0\Actividad8.dll
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\bin\Debug\net6.0\Actividad8.pdb
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\obj\Debug\net6.0\Actividad8.csproj.AssemblyReference.cache
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\obj\Debug\net6.0\Actividad8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\obj\Debug\net6.0\Actividad8.AssemblyInfoInputs.cache
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\obj\Debug\net6.0\Actividad8.AssemblyInfo.cs
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\obj\Debug\net6.0\Actividad8.csproj.CoreCompileInputs.cache
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\obj\Debug\net6.0\Actividad8.dll
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\obj\Debug\net6.0\refint\Actividad8.dll
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\obj\Debug\net6.0\Actividad8.pdb
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\obj\Debug\net6.0\Actividad8.genruntimeconfig.cache
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\UD1 - Ficheros\Actividades\23-24\Actividad8\Actividad8\obj\Debug\net6.0\ref\Actividad8.dll
