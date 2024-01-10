@@ -1,0 +1,17 @@
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\bin\Debug\net6.0-windows\Actividad7.exe
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\bin\Debug\net6.0-windows\Actividad7.deps.json
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\bin\Debug\net6.0-windows\Actividad7.runtimeconfig.json
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\bin\Debug\net6.0-windows\Actividad7.dll
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\bin\Debug\net6.0-windows\Actividad7.pdb
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\obj\Debug\net6.0-windows\Actividad7.csproj.AssemblyReference.cache
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\obj\Debug\net6.0-windows\Actividad7.Form1.resources
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\obj\Debug\net6.0-windows\Actividad7.csproj.GenerateResource.cache
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\obj\Debug\net6.0-windows\Actividad7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\obj\Debug\net6.0-windows\Actividad7.AssemblyInfoInputs.cache
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\obj\Debug\net6.0-windows\Actividad7.AssemblyInfo.cs
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\obj\Debug\net6.0-windows\Actividad7.csproj.CoreCompileInputs.cache
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\obj\Debug\net6.0-windows\Actividad7.dll
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\obj\Debug\net6.0-windows\refint\Actividad7.dll
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\obj\Debug\net6.0-windows\Actividad7.pdb
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\obj\Debug\net6.0-windows\Actividad7.genruntimeconfig.cache
+C:\Users\MARTIN\Dropbox\Clases\Montecastelo\DAM\2º DAM\ACCESO A DATOS\Temario\Tema01 - Ficheros\Actividades\22-23\Actividad7\Actividad7\obj\Debug\net6.0-windows\ref\Actividad7.dll
