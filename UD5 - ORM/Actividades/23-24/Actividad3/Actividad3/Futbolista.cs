@@ -3,24 +3,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace Actividad3
 {
     public class Futbolista
     {
-        private string Codigo { get; set; }
-        private string Nombre { get; set; }
-        private string Equipo { get; set; }
-        private string CodigoEquipo { get; set; }
-        private string Posicion { get; set; }
-        private int Edad { get; set; }
-        private int Goles { get; set; }
-        private int TA { get; set; }
-        private int TR { get; set; }
-        private int Minutos { get; set; }
-        private string PrecioMercado { get; set; }
-        private int Dorsal { get; set; }
-        private int Peso { get; set; }
+        private string codigo;
+        private string nombre;
+        private string equipo;
+        private string codigoEquipo;
+        private string posicion;
+        private int edad;
+        private int goles;
+        private int tA;
+        private int tR;
+        private int minutos;
+        private string precioMercado;
+        private int dorsal;
+        private int peso;
+        private string nombrePareja;
+
+        public string NombrePareja { get => nombrePareja; set => nombrePareja = value; }
+
+        public string Codigo { get => codigo; set => codigo = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Equipo { get => equipo; set => equipo = value; }
+        public string CodigoEquipo { get => codigoEquipo; set => codigoEquipo = value; }
+        public string Posicion { get => posicion; set => posicion = value; }
+        public int Edad { get => edad; set => edad = value; }
+        public int Goles { get => goles; set => goles = value; }
+        public int TA { get => tA; set => tA = value; }
+        public int TR { get => tR; set => tR = value; }
+        public int Minutos { get => minutos; set => minutos = value; }
+        public string PrecioMercado { get => precioMercado; set => precioMercado = value; }
+        public int Dorsal { get => dorsal; set => dorsal = value; }
+        public int Peso { get => peso; set => peso = value; }
 
         public Futbolista()
         {
@@ -51,7 +69,7 @@ namespace Actividad3
 
         public override string ToString()
         {
-            return this.Nombre;
+            return Nombre;
         }
     }
 }

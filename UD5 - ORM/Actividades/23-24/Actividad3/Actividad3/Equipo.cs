@@ -7,19 +7,31 @@ using System.Threading.Tasks;
 
 namespace Actividad3
 {
-    class Equipo
+    public class Equipo
     {
-        private string Codigo { get; set; }
-        private string Nombre { get; set; }
-        private string Pais { get; set; }
-        private int Goles { get; set; }
-        private int Puntos { get; set; }
-        private string PJ { get; set; }
-        private int PG { get; set; }
-        private int PE { get; set; }
-        private int PP { get; set; }
-        private string Estadio { get; set; }
-        private string Ciudad { get; set; }
+        private string codigo;
+        private string nombre;
+        private string pais;
+        private int goles;
+        private int puntos;
+        private string pJ;
+        private int pG;
+        private int pE;
+        private int pP;
+        private string estadio;
+        private string ciudad;
+
+        public string Codigo { get => codigo; set => codigo = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Pais { get => pais; set => pais = value; }
+        public int Goles { get => goles; set => goles = value; }
+        public int Puntos { get => puntos; set => puntos = value; }
+        public string PJ { get => pJ; set => pJ = value; }
+        public int PG { get => pG; set => pG = value; }
+        public int PE { get => pE; set => pE = value; }
+        public int PP { get => pP; set => pP = value; }
+        public string Estadio { get => estadio; set => estadio = value; }
+        public string Ciudad { get => ciudad; set => ciudad = value; }
 
         public Equipo(string codigo, string nombre, string pais, int goles, int puntos, string pJ, int pG, int pE, int pP, string estadio, string ciudad)
         {

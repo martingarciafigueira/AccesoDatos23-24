@@ -30,6 +30,7 @@ namespace Actividad3
                 //Ejecucion de la consulta
                 List<Equipo> equipos = (List<Equipo>) conexion.Query<Equipo>(consulta);
                 lstEquipos.DataSource = equipos;
+                cbEquipoSeleccionado.DataSource = equipos;
             }
         }
 
@@ -73,6 +74,26 @@ namespace Actividad3
 
                 //Ejecucion de la consulta
                 conexion.Execute(new CommandDefinition(consulta));
+            }
+        }
+
+        private void btnInsertarFutbolista_Click(object sender, EventArgs e)
+        {
+            if (cbEquipoSeleccionado.SelectedItem != null)
+            {
+                Equipo equipoSeleccionado = (Equipo)cbEquipoSeleccionado.SelectedItem;
+
+                using (IDbConnection conexion = new SqlConnection(cadenaConexion))
+                {
+                    var consulta = $@"INSERT INTO Futbolistas (Codigo, Nombre, CodigoEquipo, Posicion, Edad, Dorsal) VALUES ('{txtCodigoFutbolista.Text}', '{txtNombreFutbolista.Text}', '{equipoSeleccionado.Codigo}', '{txtPosicionFutbolista.Text}',{txtEdadFutbolista.Text}, {txtDorsalFutbolista.Text})";
+
+                    //Ejecucion de la consulta
+                    conexion.Execute(new CommandDefinition(consulta));
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un equipo");
             }
         }
     }
