@@ -14,6 +14,8 @@ namespace Actividad3
 {
     public partial class Form1 : Form
     {
+        string cadenaConexion = "Initial Catalog = Futbol; Data Source = localhost; user=sa; password=montecastelo";
+
         public Form1()
         {
             InitializeComponent();
@@ -21,8 +23,6 @@ namespace Actividad3
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
-            string cadenaConexion = "Initial Catalog = Futbol; Data Source = localhost; user=sa; password=montecastelo";
-
             using(IDbConnection conexion = new SqlConnection(cadenaConexion))
             {
                 var consulta = @"SELECT * FROM Equipos";
@@ -30,6 +30,49 @@ namespace Actividad3
                 //Ejecucion de la consulta
                 List<Equipo> equipos = (List<Equipo>) conexion.Query<Equipo>(consulta);
                 lstEquipos.DataSource = equipos;
+            }
+        }
+
+        private void lstEquipos_DoubleClick(object sender, EventArgs e)
+        {
+            string nombreEquipo = lstEquipos.SelectedItem.ToString();
+
+            ShowListaFutbolistasEquipoTodosParametros(nombreEquipo);
+            //ShowListaFutbolistasEquipoTresParametros("SD Eibar");
+        }
+
+        public void ShowListaFutbolistasEquipoTodosParametros(string equipo)
+        {
+            using (IDbConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                var consulta = $@"SELECT F.* FROM Futbolistas F INNER JOIN Equipos E ON F.CodigoEquipo = E.Codigo WHERE E.Nombre LIKE '{equipo}'";
+
+                //Ejecucion de la consulta
+                List<Futbolista> futbolistas = (List<Futbolista>)conexion.Query<Futbolista>(consulta);
+                lstFutbolistas.DataSource = futbolistas;
+            }
+        }
+
+        public void ShowListaFutbolistasEquipoDosParametros(string equipo)
+        {
+            using (IDbConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                var consulta = @"SELECT F.Codigo, F.Nombre FROM Futbolistas F INNER JOIN Equipos E ON F.CodigoEquipo = E.Codigo WHERE E.Nombre LIKE 'SD Eibar'";
+
+                //Ejecucion de la consulta
+                List<Futbolista> futbolistas = (List<Futbolista>)conexion.Query<Futbolista>(consulta);
+                lstFutbolistas.DataSource = futbolistas;
+            }
+        }
+
+        private void btnInsertarEquipo_Click(object sender, EventArgs e)
+        {
+            using (IDbConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                var consulta = $@"INSERT INTO Equipos (Codigo, Nombre, Pais, Estadio, Ciudad) VALUES ('{txtCodigo.Text}', '{txtNombre.Text}', '{txtPais.Text}', '{txtEstadio.Text}','{txtCiudad.Text}')";
+
+                //Ejecucion de la consulta
+                conexion.Execute(new CommandDefinition(consulta));
             }
         }
     }
