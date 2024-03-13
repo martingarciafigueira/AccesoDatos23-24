@@ -48,10 +48,13 @@ namespace Actividad3
             Ciudad = ciudad;
         }
 
-        public Equipo(string codigo, string nombre)
+        public Equipo(string codigo, string nombre, string pais, string estadio, string ciudad)
         {
             Codigo = codigo;
             Nombre = nombre;
+            Pais = pais;
+            Estadio = estadio;
+            Ciudad = ciudad;
         }
 
         public override string ToString()

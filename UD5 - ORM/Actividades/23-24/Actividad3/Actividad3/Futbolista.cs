@@ -11,7 +11,6 @@ namespace Actividad3
     {
         private string codigo;
         private string nombre;
-        private string equipo;
         private string codigoEquipo;
         private string posicion;
         private int edad;
@@ -22,13 +21,9 @@ namespace Actividad3
         private string precioMercado;
         private int dorsal;
         private int peso;
-        private string nombrePareja;
-
-        public string NombrePareja { get => nombrePareja; set => nombrePareja = value; }
 
         public string Codigo { get => codigo; set => codigo = value; }
         public string Nombre { get => nombre; set => nombre = value; }
-        public string Equipo { get => equipo; set => equipo = value; }
         public string CodigoEquipo { get => codigoEquipo; set => codigoEquipo = value; }
         public string Posicion { get => posicion; set => posicion = value; }
         public int Edad { get => edad; set => edad = value; }
@@ -44,11 +39,10 @@ namespace Actividad3
         {
         }
 
-        public Futbolista(string codigo, string nombre, string equipo, string codigoEquipo, string posicion, int edad, int goles, int tA, int tR, int minutos, string precioMercado, int dorsal, int peso)
+        public Futbolista(string codigo, string nombre, string codigoEquipo, string posicion, int edad, int goles, int tA, int tR, int minutos, string precioMercado, int dorsal, int peso)
         {
             Codigo = codigo;
             Nombre = nombre;
-            Equipo = equipo;
             CodigoEquipo = codigoEquipo;
             Posicion = posicion;
             Edad = edad;
@@ -61,10 +55,14 @@ namespace Actividad3
             Peso = peso;
         }
 
-        public Futbolista(string codigo, string nombre)
+        public Futbolista(string codigo, string nombre, string codigoEquipo, string posicion, int edad, int dorsal)
         {
             Codigo = codigo;
             Nombre = nombre;
+            CodigoEquipo = codigoEquipo;
+            Posicion = posicion;
+            Edad = edad;
+            Dorsal = dorsal;
         }
 
         public override string ToString()

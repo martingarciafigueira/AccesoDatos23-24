@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnConectar = new System.Windows.Forms.Button();
             this.lstEquipos = new System.Windows.Forms.ListBox();
             this.lstFutbolistas = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnInsertarEquipo = new System.Windows.Forms.Button();
+            this.lblInsertarActualizarEquipos = new System.Windows.Forms.Label();
+            this.btnInsertarActualizarEquipo = new System.Windows.Forms.Button();
             this.txtCiudad = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtEstadio = new System.Windows.Forms.TextBox();
@@ -45,8 +44,10 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnInsertarFutbolista = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cbEquipoSeleccionado = new System.Windows.Forms.ComboBox();
+            this.lblInsertarActualizarFutbolistas = new System.Windows.Forms.Label();
+            this.btnInsertarActualizarFutbolista = new System.Windows.Forms.Button();
             this.txtDorsalFutbolista = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtEdadFutbolista = new System.Windows.Forms.TextBox();
@@ -57,21 +58,13 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtCodigoFutbolista = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.cbEquipoSeleccionado = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.btnEditarEquipo = new System.Windows.Forms.Button();
+            this.btnEditarFutbolista = new System.Windows.Forms.Button();
+            this.btnBorrarEquipo = new System.Windows.Forms.Button();
+            this.btnBorrarFutbolista = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnConectar
-            // 
-            this.btnConectar.Location = new System.Drawing.Point(39, 489);
-            this.btnConectar.Name = "btnConectar";
-            this.btnConectar.Size = new System.Drawing.Size(154, 77);
-            this.btnConectar.TabIndex = 0;
-            this.btnConectar.Text = "Cargar lista equipos";
-            this.btnConectar.UseVisualStyleBackColor = true;
-            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
             // 
             // lstEquipos
             // 
@@ -79,7 +72,7 @@
             this.lstEquipos.ItemHeight = 16;
             this.lstEquipos.Location = new System.Drawing.Point(21, 63);
             this.lstEquipos.Name = "lstEquipos";
-            this.lstEquipos.Size = new System.Drawing.Size(214, 404);
+            this.lstEquipos.Size = new System.Drawing.Size(214, 132);
             this.lstEquipos.TabIndex = 1;
             this.lstEquipos.DoubleClick += new System.EventHandler(this.lstEquipos_DoubleClick);
             // 
@@ -89,13 +82,13 @@
             this.lstFutbolistas.ItemHeight = 16;
             this.lstFutbolistas.Location = new System.Drawing.Point(270, 63);
             this.lstFutbolistas.Name = "lstFutbolistas";
-            this.lstFutbolistas.Size = new System.Drawing.Size(204, 404);
+            this.lstFutbolistas.Size = new System.Drawing.Size(204, 132);
             this.lstFutbolistas.TabIndex = 2;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.btnInsertarEquipo);
+            this.panel1.Controls.Add(this.lblInsertarActualizarEquipos);
+            this.panel1.Controls.Add(this.btnInsertarActualizarEquipo);
             this.panel1.Controls.Add(this.txtCiudad);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtEstadio);
@@ -111,31 +104,31 @@
             this.panel1.Size = new System.Drawing.Size(412, 429);
             this.panel1.TabIndex = 3;
             // 
-            // label6
+            // lblInsertarActualizarEquipos
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(75, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(250, 38);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Insertar equipos";
+            this.lblInsertarActualizarEquipos.AutoSize = true;
+            this.lblInsertarActualizarEquipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInsertarActualizarEquipos.Location = new System.Drawing.Point(75, 15);
+            this.lblInsertarActualizarEquipos.Name = "lblInsertarActualizarEquipos";
+            this.lblInsertarActualizarEquipos.Size = new System.Drawing.Size(250, 38);
+            this.lblInsertarActualizarEquipos.TabIndex = 4;
+            this.lblInsertarActualizarEquipos.Text = "Insertar equipos";
             // 
-            // btnInsertarEquipo
+            // btnInsertarActualizarEquipo
             // 
-            this.btnInsertarEquipo.Location = new System.Drawing.Point(233, 198);
-            this.btnInsertarEquipo.Name = "btnInsertarEquipo";
-            this.btnInsertarEquipo.Size = new System.Drawing.Size(154, 77);
-            this.btnInsertarEquipo.TabIndex = 4;
-            this.btnInsertarEquipo.Text = "Insertar equipo";
-            this.btnInsertarEquipo.UseVisualStyleBackColor = true;
-            this.btnInsertarEquipo.Click += new System.EventHandler(this.btnInsertarEquipo_Click);
+            this.btnInsertarActualizarEquipo.Location = new System.Drawing.Point(284, 213);
+            this.btnInsertarActualizarEquipo.Name = "btnInsertarActualizarEquipo";
+            this.btnInsertarActualizarEquipo.Size = new System.Drawing.Size(114, 47);
+            this.btnInsertarActualizarEquipo.TabIndex = 4;
+            this.btnInsertarActualizarEquipo.Text = "Insertar equipo";
+            this.btnInsertarActualizarEquipo.UseVisualStyleBackColor = true;
+            this.btnInsertarActualizarEquipo.Click += new System.EventHandler(this.btnInsertarEquipo_Click);
             // 
             // txtCiudad
             // 
             this.txtCiudad.Location = new System.Drawing.Point(92, 379);
             this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(100, 22);
+            this.txtCiudad.Size = new System.Drawing.Size(174, 22);
             this.txtCiudad.TabIndex = 9;
             // 
             // label5
@@ -152,7 +145,7 @@
             // 
             this.txtEstadio.Location = new System.Drawing.Point(92, 302);
             this.txtEstadio.Name = "txtEstadio";
-            this.txtEstadio.Size = new System.Drawing.Size(100, 22);
+            this.txtEstadio.Size = new System.Drawing.Size(174, 22);
             this.txtEstadio.TabIndex = 7;
             // 
             // label4
@@ -169,7 +162,7 @@
             // 
             this.txtPais.Location = new System.Drawing.Point(92, 225);
             this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(100, 22);
+            this.txtPais.Size = new System.Drawing.Size(174, 22);
             this.txtPais.TabIndex = 5;
             // 
             // label3
@@ -186,7 +179,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(92, 149);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 22);
+            this.txtNombre.Size = new System.Drawing.Size(174, 22);
             this.txtNombre.TabIndex = 3;
             // 
             // label2
@@ -203,7 +196,7 @@
             // 
             this.txtCodigo.Location = new System.Drawing.Point(92, 84);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(174, 22);
             this.txtCodigo.TabIndex = 1;
             // 
             // label1
@@ -220,8 +213,8 @@
             // 
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.cbEquipoSeleccionado);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.btnInsertarFutbolista);
+            this.panel2.Controls.Add(this.lblInsertarActualizarFutbolistas);
+            this.panel2.Controls.Add(this.btnInsertarActualizarFutbolista);
             this.panel2.Controls.Add(this.txtDorsalFutbolista);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.txtEdadFutbolista);
@@ -237,25 +230,43 @@
             this.panel2.Size = new System.Drawing.Size(412, 429);
             this.panel2.TabIndex = 4;
             // 
-            // label7
+            // label13
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(75, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(266, 38);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Insertar futbolista";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(262, 338);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(79, 25);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "Equipo:";
             // 
-            // btnInsertarFutbolista
+            // cbEquipoSeleccionado
             // 
-            this.btnInsertarFutbolista.Location = new System.Drawing.Point(232, 170);
-            this.btnInsertarFutbolista.Name = "btnInsertarFutbolista";
-            this.btnInsertarFutbolista.Size = new System.Drawing.Size(154, 77);
-            this.btnInsertarFutbolista.TabIndex = 4;
-            this.btnInsertarFutbolista.Text = "Insertar futbolista";
-            this.btnInsertarFutbolista.UseVisualStyleBackColor = true;
-            this.btnInsertarFutbolista.Click += new System.EventHandler(this.btnInsertarFutbolista_Click);
+            this.cbEquipoSeleccionado.FormattingEnabled = true;
+            this.cbEquipoSeleccionado.Location = new System.Drawing.Point(244, 377);
+            this.cbEquipoSeleccionado.Name = "cbEquipoSeleccionado";
+            this.cbEquipoSeleccionado.Size = new System.Drawing.Size(121, 24);
+            this.cbEquipoSeleccionado.TabIndex = 10;
+            // 
+            // lblInsertarActualizarFutbolistas
+            // 
+            this.lblInsertarActualizarFutbolistas.AutoSize = true;
+            this.lblInsertarActualizarFutbolistas.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInsertarActualizarFutbolistas.Location = new System.Drawing.Point(75, 15);
+            this.lblInsertarActualizarFutbolistas.Name = "lblInsertarActualizarFutbolistas";
+            this.lblInsertarActualizarFutbolistas.Size = new System.Drawing.Size(266, 38);
+            this.lblInsertarActualizarFutbolistas.TabIndex = 4;
+            this.lblInsertarActualizarFutbolistas.Text = "Insertar futbolista";
+            // 
+            // btnInsertarActualizarFutbolista
+            // 
+            this.btnInsertarActualizarFutbolista.Location = new System.Drawing.Point(232, 170);
+            this.btnInsertarActualizarFutbolista.Name = "btnInsertarActualizarFutbolista";
+            this.btnInsertarActualizarFutbolista.Size = new System.Drawing.Size(154, 77);
+            this.btnInsertarActualizarFutbolista.TabIndex = 4;
+            this.btnInsertarActualizarFutbolista.Text = "Insertar futbolista";
+            this.btnInsertarActualizarFutbolista.UseVisualStyleBackColor = true;
+            this.btnInsertarActualizarFutbolista.Click += new System.EventHandler(this.btnInsertarFutbolista_Click);
             // 
             // txtDorsalFutbolista
             // 
@@ -342,36 +353,62 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Codigo";
             // 
-            // cbEquipoSeleccionado
+            // btnEditarEquipo
             // 
-            this.cbEquipoSeleccionado.FormattingEnabled = true;
-            this.cbEquipoSeleccionado.Location = new System.Drawing.Point(244, 377);
-            this.cbEquipoSeleccionado.Name = "cbEquipoSeleccionado";
-            this.cbEquipoSeleccionado.Size = new System.Drawing.Size(121, 24);
-            this.cbEquipoSeleccionado.TabIndex = 10;
+            this.btnEditarEquipo.Location = new System.Drawing.Point(58, 200);
+            this.btnEditarEquipo.Name = "btnEditarEquipo";
+            this.btnEditarEquipo.Size = new System.Drawing.Size(109, 60);
+            this.btnEditarEquipo.TabIndex = 5;
+            this.btnEditarEquipo.Text = "Seleccionar equipo a editar";
+            this.btnEditarEquipo.UseVisualStyleBackColor = true;
+            this.btnEditarEquipo.Click += new System.EventHandler(this.btnEditarEquipo_Click);
             // 
-            // label13
+            // btnEditarFutbolista
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(262, 338);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(79, 25);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "Equipo:";
+            this.btnEditarFutbolista.Location = new System.Drawing.Point(309, 201);
+            this.btnEditarFutbolista.Name = "btnEditarFutbolista";
+            this.btnEditarFutbolista.Size = new System.Drawing.Size(109, 58);
+            this.btnEditarFutbolista.TabIndex = 6;
+            this.btnEditarFutbolista.Text = "Seleccionar futbolista a editar";
+            this.btnEditarFutbolista.UseVisualStyleBackColor = true;
+            this.btnEditarFutbolista.Click += new System.EventHandler(this.btnEditarFutbolista_Click);
+            // 
+            // btnBorrarEquipo
+            // 
+            this.btnBorrarEquipo.Location = new System.Drawing.Point(58, 289);
+            this.btnBorrarEquipo.Name = "btnBorrarEquipo";
+            this.btnBorrarEquipo.Size = new System.Drawing.Size(109, 60);
+            this.btnBorrarEquipo.TabIndex = 7;
+            this.btnBorrarEquipo.Text = "Borrar equipo";
+            this.btnBorrarEquipo.UseVisualStyleBackColor = true;
+            this.btnBorrarEquipo.Click += new System.EventHandler(this.btnBorrarEquipo_Click);
+            // 
+            // btnBorrarFutbolista
+            // 
+            this.btnBorrarFutbolista.Location = new System.Drawing.Point(309, 289);
+            this.btnBorrarFutbolista.Name = "btnBorrarFutbolista";
+            this.btnBorrarFutbolista.Size = new System.Drawing.Size(109, 60);
+            this.btnBorrarFutbolista.TabIndex = 8;
+            this.btnBorrarFutbolista.Text = "Borrar futbolista";
+            this.btnBorrarFutbolista.UseVisualStyleBackColor = true;
+            this.btnBorrarFutbolista.Click += new System.EventHandler(this.btnBorrarFutbolista_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1567, 710);
+            this.Controls.Add(this.btnBorrarFutbolista);
+            this.Controls.Add(this.btnBorrarEquipo);
+            this.Controls.Add(this.btnEditarFutbolista);
+            this.Controls.Add(this.btnEditarEquipo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lstFutbolistas);
             this.Controls.Add(this.lstEquipos);
-            this.Controls.Add(this.btnConectar);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -381,12 +418,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnConectar;
         private System.Windows.Forms.ListBox lstEquipos;
         private System.Windows.Forms.ListBox lstFutbolistas;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnInsertarEquipo;
+        private System.Windows.Forms.Button btnInsertarActualizarEquipo;
         private System.Windows.Forms.TextBox txtCiudad;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtEstadio;
@@ -397,10 +432,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblInsertarActualizarEquipos;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnInsertarFutbolista;
+        private System.Windows.Forms.Label lblInsertarActualizarFutbolistas;
+        private System.Windows.Forms.Button btnInsertarActualizarFutbolista;
         private System.Windows.Forms.TextBox txtDorsalFutbolista;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtEdadFutbolista;
@@ -413,6 +448,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cbEquipoSeleccionado;
+        private System.Windows.Forms.Button btnEditarEquipo;
+        private System.Windows.Forms.Button btnEditarFutbolista;
+        private System.Windows.Forms.Button btnBorrarEquipo;
+        private System.Windows.Forms.Button btnBorrarFutbolista;
     }
 }
 
