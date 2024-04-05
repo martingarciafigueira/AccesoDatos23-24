@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Ejercicio
 {
@@ -35,6 +36,19 @@ namespace Ejercicio
                 Producto producto = (Producto) conexion.Query<Producto>(consulta).FirstOrDefault();
                 if (producto == null) textBox2.Text = "No hay ese producto";
                 else textBox2.Text = producto.ToString();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (IDbConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                int codigo;
+                int.TryParse(textBox1.Text, out codigo);
+                var consulta = $@"DELETE FROM Producto WHERE Codigo = {codigo};";
+
+                //Ejecucion de la consulta
+                conexion.Execute(consulta);
             }
         }
     }

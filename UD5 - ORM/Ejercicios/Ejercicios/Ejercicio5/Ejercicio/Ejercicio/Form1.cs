@@ -33,8 +33,35 @@ namespace Ejercicio
 
                 //Ejecucion de la consulta
                 Producto producto = (Producto) conexion.Query<Producto>(consulta).FirstOrDefault();
-                if (producto == null) textBox2.Text = "No hay ese producto";
-                else textBox2.Text = producto.ToString();
+                if (producto == null)
+                {
+                    textBox2.Text = "No hay ese producto";
+                    textBox3.Text = "No hay ese producto";
+                }
+                else
+                {
+                    textBox2.Text = producto.Nombre;
+                    textBox3.Text = producto.Precio.ToString("0.00");
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (IDbConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                int codigo;
+                string nombre;
+                Single precio;
+
+                int.TryParse(textBox1.Text, out codigo);
+                nombre = textBox2.Text;
+                Single.TryParse(textBox3.Text, out precio);
+
+                var consulta = $"UPDATE Producto SET Nombre = '{nombre}', Precio = TRY_CAST( REPLACE( '{precio}', ',', '.') AS FLOAT) WHERE Codigo = {codigo}";
+
+                //Ejecucion de la consulta
+                conexion.Execute(consulta);
             }
         }
     }
