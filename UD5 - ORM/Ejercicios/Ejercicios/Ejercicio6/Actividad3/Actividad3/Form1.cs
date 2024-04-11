@@ -84,7 +84,7 @@ namespace Actividad3
         {
             int codigo;
 
-            int.TryParse(txtCodigo.Text, out codigo);
+            int.TryParse(txtCodigoFabricante.Text, out codigo);
             Fabricante fabricante = new Fabricante(codigo, txtNombreFabricante.Text);
 
             if (tipoOperacionFabricante == TIPO_OPERACION.INSERT)
@@ -199,12 +199,11 @@ namespace Actividad3
             {
                 var consulta = 
                     $@"UPDATE Producto SET Codigo = @Codigo, 
-                    Nombre = @Nombre, Pais = @Pais, 
-                    Estadio = @Estadio, Ciudad = @Ciudad 
+                    Nombre = @Nombre, Precio = @Precio, Codigo_Fabricante = @Codigo_Fabricante 
                     WHERE Codigo = @Codigo";
 
                 //Ejecucion de la consulta
-                conexion.Execute(consulta);
+                conexion.Execute(consulta, producto);
             }
         }
         public void EditarFabricante(Fabricante fabricante)
@@ -213,13 +212,11 @@ namespace Actividad3
             {
                 var consulta =
                     $@"UPDATE Fabricante SET Codigo = @Codigo, 
-                    Nombre = @Nombre, Posicion = @Posicion, 
-                    Edad = @Edad, Dorsal= @Dorsal,
-                    CodigoProducto = @CodigoProducto
+                    Nombre = @Nombre
                     WHERE Codigo = @Codigo";
 
                 //Ejecucion de la consulta
-                conexion.Execute(consulta);
+                conexion.Execute(consulta, fabricante);
             }
         }
 
