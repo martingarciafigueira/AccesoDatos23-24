@@ -39,12 +39,12 @@ namespace Tarea03Pokemon
         private void lbPokemons_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             var pokemon = (Pokemon)lbPokemons.SelectedItem;
-            lbPokemonEvolucionesAltas.DataSource = centroPokemon.ObtenerEvolucionesFinales(pokemon.Numero_pokedex);
+            lbPokemonEvolucionesAltas.DataSource = centroPokemon.ObtenerEvolucionesFinales(pokemon.PokemonId);
             //lbPokemonEvolucionesAltas.DataSource = listas;
             lbPokemonEvolucionesAltas.Refresh();
-            lbPokemonEvolucionesPrevias.DataSource = centroPokemon.ObtenerEvolucionesPreviasPokemon(pokemon.Numero_pokedex);
+            lbPokemonEvolucionesPrevias.DataSource = centroPokemon.ObtenerEvolucionesPreviasPokemon(pokemon.PokemonId);
             lbPokemonEvolucionesPrevias.Refresh();
-            lbAtaques.DataSource = centroPokemon.ObtenerAtaques(pokemon.Numero_pokedex);
+            lbAtaques.DataSource = centroPokemon.ObtenerAtaques(pokemon.PokemonId);
         }
 
         private void btCombate_Click(object sender, EventArgs e)

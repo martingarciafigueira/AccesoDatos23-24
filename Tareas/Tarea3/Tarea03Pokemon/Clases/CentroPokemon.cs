@@ -30,18 +30,18 @@ namespace Tarea03Pokemon.Clases
         {
             Lista = pokemonDatabase.listaPokemon();
         }       
-        public BindingList<Pokemon> ObtenerEvolucionesFinales(int numero_pokedex)
+        public BindingList<Pokemon> ObtenerEvolucionesFinales(int PokemonId)
         {
-            return pokemonDatabase.ObtenerEvolucionesFinales(numero_pokedex);
+            return pokemonDatabase.ObtenerEvolucionesFinales(PokemonId);
         }
 
-        public BindingList<Pokemon> ObtenerEvolucionesPreviasPokemon(int numero_pokedex)
+        public BindingList<Pokemon> ObtenerEvolucionesPreviasPokemon(int PokemonId)
         {
-            return pokemonDatabase.ObtenerEvolucionesPreviasPokemon(numero_pokedex);
+            return pokemonDatabase.ObtenerEvolucionesPreviasPokemon(PokemonId);
         }
-        public object ObtenerAtaques(int numero_pokedex)
+        public object ObtenerAtaques(int PokemonId)
         {
-            return pokemonDatabase.GetAtaques(numero_pokedex);
+            return pokemonDatabase.GetAtaques(PokemonId);
         }
 
         public void filtrarListaPokemon(string tipo, float peso, float altura)
@@ -68,7 +68,7 @@ namespace Tarea03Pokemon.Clases
                 ///Generamos un numero ramdon para obtener el pokemos                 
                 int randomNumber = random.Next(1, 100);
                 //Obtenemos el pokemos segun el nuemro ramdon
-                var pokemon_actual = listaPokemonSin.SingleOrDefault(pokemon => pokemon.Numero_pokedex == randomNumber);
+                var pokemon_actual = listaPokemonSin.SingleOrDefault(pokemon => pokemon.PokemonId == randomNumber);
                 primerEntrenador.ListaPokemos.Add(pokemon_actual);
                 
 
@@ -82,7 +82,7 @@ namespace Tarea03Pokemon.Clases
                 ///Generamos un numero ramdon para obtener el pokemos 
                 int randomNumber = random.Next(1, 100);
                 //Obtenemos el pokemos segun el nuemro ramdon
-                var pokemon_actual = listaPokemonSin.SingleOrDefault(pokemon => pokemon.Numero_pokedex == randomNumber);
+                var pokemon_actual = listaPokemonSin.SingleOrDefault(pokemon => pokemon.PokemonId == randomNumber);
                 segundoEntrenador.ListaPokemos.Add(pokemon_actual);               
             }
             ListaEntrenadores.Add(segundoEntrenador);

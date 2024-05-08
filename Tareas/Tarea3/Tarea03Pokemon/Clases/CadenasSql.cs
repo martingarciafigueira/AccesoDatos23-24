@@ -10,7 +10,7 @@ namespace Tarea03Pokemon.Clases
     static class CadenasSql
     {
 
-        public static string SelectPokemon = "SELECT p.numero_pokedex" +
+        public static string SelectPokemon = "SELECT p.PokemonId" +
                                               " ,nombre" +
                                               " ,peso " +
                                               " ,altura " +
@@ -20,12 +20,12 @@ namespace Tarea03Pokemon.Clases
                                               " ,especial" +
                                               " , velocidad	" +
                                               " ,COALESCE(pe.pokemon_evolucionado,0) pokemon_evolucionado" +
-                                              " ,COALESCE((SELECT nombre from pokemon where numero_pokedex = pe.pokemon_origen),'O') nombre_evolucion" +                                              
-                                              " FROM pokemon p FULL JOIN evoluciona_de pe ON p.numero_pokedex = pe.pokemon_origen " +
-                                              " INNER JOIN estadisticas_base es ON p.numero_pokedex = es.numero_pokedex " +                                              
-                                              " order by numero_pokedex asc;";
+                                              " ,COALESCE((SELECT nombre from pokemon where PokemonId = pe.pokemon_origen),'O') nombre_evolucion" +                                              
+                                              " FROM pokemon p FULL JOIN evoluciona_de pe ON p.PokemonId = pe.pokemon_origen " +
+                                              " INNER JOIN estadisticas_base es ON p.PokemonId = es.PokemonId " +                                              
+                                              " order by PokemonId asc;";
 
-        public static string SelectPokemonNoWhere = "SELECT p.numero_pokedex" +
+        public static string SelectPokemonNoWhere = "SELECT p.PokemonId" +
                                                       " ,nombre" +
                                                       " ,peso " +
                                                       " ,altura " +
@@ -35,12 +35,12 @@ namespace Tarea03Pokemon.Clases
                                                       " ,especial" +
                                                       " , velocidad	" +
                                                       " ,COALESCE(pe.pokemon_evolucionado,0) pokemon_evolucionado" +
-                                                      " ,COALESCE((SELECT nombre from pokemon where numero_pokedex = pe.pokemon_origen),'O') nombre_evolucion" +                                                      
-                                                      " FROM pokemon p FULL JOIN evoluciona_de pe ON p.numero_pokedex = pe.pokemon_origen " +
-                                                      " INNER JOIN estadisticas_base es ON p.numero_pokedex = es.numero_pokedex ";                                                      
+                                                      " ,COALESCE((SELECT nombre from pokemon where PokemonId = pe.pokemon_origen),'O') nombre_evolucion" +                                                      
+                                                      " FROM pokemon p FULL JOIN evoluciona_de pe ON p.PokemonId = pe.pokemon_origen " +
+                                                      " INNER JOIN estadisticas_base es ON p.PokemonId = es.PokemonId ";                                                      
                                                       
 
-        public static string SelectEstadisticasBase = "SELECT numero_pokedex " +
+        public static string SelectEstadisticasBase = "SELECT PokemonId " +
                                                           ", ps" +
                                                           ", ataque" +
                                                           ", defensa" + 

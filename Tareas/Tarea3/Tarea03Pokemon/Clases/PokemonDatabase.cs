@@ -37,17 +37,17 @@ namespace Tarea03Pokemon.Clases
                     //Generamos objecto
                     Pokemon pk = new Pokemon();
 
-                    pk.Numero_pokedex = (int)registros["numero_pokedex"];
+                    pk.PokemonId = (int)registros["PokemonId"];
                     pk.Nombre         = (string)registros["nombre"];
                     pk.Peso           = Convert.ToSingle(registros["peso"]);
                     pk.Altura         = Convert.ToSingle(registros["altura"]);
                     pk.PS             = (int)registros["ps"];
                     pk.Ataque         = (int)registros["ataque"];
-                    pk.Numero_pokedex_evolucion = (int)registros["pokemon_evolucionado"];
+                    pk.PokemonId_evolucion = (int)registros["pokemon_evolucionado"];
                     pk.Pokemon_evolucionado     = (string)registros["nombre_evolucion"];
 
                     //Comprobamos si existen duplicados
-                    var pokemon_actual = ListaPokemonMostrar.SingleOrDefault(pokemon => pokemon.Numero_pokedex == (int)registros["numero_pokedex"]);
+                    var pokemon_actual = ListaPokemonMostrar.SingleOrDefault(pokemon => pokemon.PokemonId == (int)registros["PokemonId"]);
 
                     if (pokemon_actual == null)
                     {
@@ -99,13 +99,13 @@ namespace Tarea03Pokemon.Clases
                     //Generamos objecto
                     Pokemon pk = new Pokemon();
 
-                    pk.Numero_pokedex = (int)registros["numero_pokedex"];
+                    pk.PokemonId = (int)registros["PokemonId"];
                     pk.Nombre = (string)registros["nombre"];
                     pk.Peso = Convert.ToSingle(registros["peso"]);
                     pk.Altura = Convert.ToSingle(registros["altura"]);
                     pk.PS = (int)registros["ps"];
                     pk.Ataque = (int)registros["ataque"];
-                    pk.Numero_pokedex_evolucion = (int)registros["pokemon_evolucionado"];
+                    pk.PokemonId_evolucion = (int)registros["pokemon_evolucionado"];
                     pk.Pokemon_evolucionado = (string)registros["nombre_evolucion"];
 
 
@@ -133,9 +133,9 @@ namespace Tarea03Pokemon.Clases
         }
 
         //Devuelve los ataques de un pokemon
-        // numero_pokedex => numero de pokedex del pokemon
+        // PokemonId => numero de pokedex del pokemon
         //return => BindingList<Movimientos> objecto con los movimientos 
-        public BindingList<Movimientos> GetAtaques(int numero_pokedex)
+        public BindingList<Movimientos> GetAtaques(int PokemonId)
         {
             try
             {
@@ -147,11 +147,11 @@ namespace Tarea03Pokemon.Clases
                                        " m.descripcion " +
                                        " FROM pokemon_movimiento_forma mv FULL JOIN  movimiento m " +
                                        " ON mv.id_movimiento = m.id_movimiento" +
-                                       " where mv.numero_pokedex = @numero_pokedes;";
+                                       " where mv.PokemonId = @numero_pokedes;";
                 //Prepara consulta
                 SqlCommand command = new SqlCommand(cadena, conexion);
                 //remplza en la consulta el campo numero_pokedes
-                command.Parameters.AddWithValue("@numero_pokedes", numero_pokedex);
+                command.Parameters.AddWithValue("@numero_pokedes", PokemonId);
                 SqlDataReader movimientosBd = command.ExecuteReader();
                //Recorremos los datos obtenidos 
                 while (movimientosBd.Read())
@@ -184,8 +184,8 @@ namespace Tarea03Pokemon.Clases
             return listaMovimientos;
         }
         //param 
-        // numero_pokedex => numero de pokedex del pokemon        
-        public BindingList<Pokemon> ObtenerEvolucionesFinales(int numero_pokedex)
+        // PokemonId => numero de pokedex del pokemon        
+        public BindingList<Pokemon> ObtenerEvolucionesFinales(int PokemonId)
         {
             BindingList<Pokemon> evolucionesSiguientesPokemon = new BindingList<Pokemon>();
             try
@@ -198,11 +198,11 @@ namespace Tarea03Pokemon.Clases
                 foreach (Pokemon pk in listaPokemons)
                 {
                  //Comprobamos cuantas veces aparece el pokemon 
-                    if (pk.Numero_pokedex == numero_pokedex)
+                    if (pk.PokemonId == PokemonId)
                     {
                         //Si existe > 1 es que tiene varias evoluciones desde el mismo numero de pokedex 
                         //Entonces se genera la lista con sus evoluciones
-                        var pokemon_evolucion = listaPokemons.SingleOrDefault(pokemon => pokemon.Numero_pokedex == pk.Numero_pokedex_evolucion);                        
+                        var pokemon_evolucion = listaPokemons.SingleOrDefault(pokemon => pokemon.PokemonId == pk.PokemonId_evolucion);                        
                         evolucionesSiguientesPokemon.Add(pokemon_evolucion);
                         contador += 1;
                     }
@@ -212,14 +212,14 @@ namespace Tarea03Pokemon.Clases
                 if (contador == 1)
                 {
                     evolucionesSiguientesPokemon.Clear();
-                    var pokemon_actual = listaPokemons.SingleOrDefault(pokemon => pokemon.Numero_pokedex == numero_pokedex);
+                    var pokemon_actual = listaPokemons.SingleOrDefault(pokemon => pokemon.PokemonId == PokemonId);
                     while (existeEvolucion)
                     {
 
-                        if (pokemon_actual.Numero_pokedex_evolucion > 0)
+                        if (pokemon_actual.PokemonId_evolucion > 0)
                         {
                             //Obtenemos el pokemon pasando el nuermo de pokedex evolucion del pokemos pasado como parametro
-                            var pokemon_evolucion = listaPokemons.SingleOrDefault(pokemon => pokemon.Numero_pokedex == pokemon_actual.Numero_pokedex_evolucion);
+                            var pokemon_evolucion = listaPokemons.SingleOrDefault(pokemon => pokemon.PokemonId == pokemon_actual.PokemonId_evolucion);
                             evolucionesSiguientesPokemon.Add(pokemon_evolucion);
                             //cargamos el pokemos obtenido para buscar en la siguiente vuelta si tiene evolucion
                             pokemon_actual = pokemon_evolucion;
@@ -252,7 +252,7 @@ namespace Tarea03Pokemon.Clases
             return evolucionesSiguientesPokemon;
         }
 
-        public BindingList<Pokemon> ObtenerEvolucionesPreviasPokemon(int numero_pokedex)
+        public BindingList<Pokemon> ObtenerEvolucionesPreviasPokemon(int PokemonId)
         {
             BindingList<Pokemon> evolucionesPreviasPokemon = new BindingList<Pokemon>();
             try
@@ -260,7 +260,7 @@ namespace Tarea03Pokemon.Clases
                 evolucionesPreviasPokemon.Clear();
                 var existeEvolucion = true;
                 //Comprobamos si tiene evoluciones
-                var pokemon_actual = listaPokemons.SingleOrDefault(pokemon => pokemon.Numero_pokedex_evolucion == numero_pokedex);
+                var pokemon_actual = listaPokemons.SingleOrDefault(pokemon => pokemon.PokemonId_evolucion == PokemonId);
 
                 // si es null seguimos ya que no tiene evoluciones
                 if (pokemon_actual != null)
@@ -270,9 +270,9 @@ namespace Tarea03Pokemon.Clases
                     while (existeEvolucion)
                     {
                         //Buscamos si tiene más
-                        if (pokemon_actual.Numero_pokedex > 0)
+                        if (pokemon_actual.PokemonId > 0)
                         {
-                            var pokemon_evolucion = listaPokemons.SingleOrDefault(pokemon => pokemon.Numero_pokedex_evolucion == pokemon_actual.Numero_pokedex);
+                            var pokemon_evolucion = listaPokemons.SingleOrDefault(pokemon => pokemon.PokemonId_evolucion == pokemon_actual.PokemonId);
                             //Si tiene mas se añade a la lista
                             if (pokemon_evolucion != null)
                             {
@@ -316,7 +316,7 @@ namespace Tarea03Pokemon.Clases
                 //Comprobamos los valores y si tenemos los añadimso en la consulta.
                 if (tipo != "")
                 {
-                    cadena += " and p.numero_pokedex in (select tip.numero_pokedex from dbo.pokemon_tipo tip where tip.id_tipo in (select tipo.id_tipo from dbo.tipo tipo where tipo.nombre = @tipo )) ";
+                    cadena += " and p.PokemonId in (select tip.PokemonId from dbo.pokemon_tipo tip where tip.id_tipo in (select tipo.id_tipo from dbo.tipo tipo where tipo.nombre = @tipo )) ";
                 }
 
                 if (peso > 0)
@@ -328,7 +328,7 @@ namespace Tarea03Pokemon.Clases
                     cadena += " AND altura =  @altura";
                 }
                 //Ultima linea para ordenar los resultados
-                cadena += " order by numero_pokedex asc;";
+                cadena += " order by PokemonId asc;";
 
                 //Generamos las consulta
                 SqlCommand command = new SqlCommand(cadena, conexion);
@@ -355,16 +355,16 @@ namespace Tarea03Pokemon.Clases
                     //Generamos objectos con los resultados y los almacenamos 
                     Pokemon pk = new Pokemon();
 
-                    pk.Numero_pokedex = (int)registros["numero_pokedex"];
+                    pk.PokemonId = (int)registros["PokemonId"];
                     pk.Nombre = (string)registros["nombre"];
                     pk.Peso = Convert.ToSingle(registros["peso"]);
                     pk.Altura = Convert.ToSingle(registros["altura"]);
                     pk.PS = (int)registros["ps"];
-                    pk.Numero_pokedex_evolucion = (int)registros["pokemon_evolucionado"];
+                    pk.PokemonId_evolucion = (int)registros["pokemon_evolucionado"];
                     pk.Pokemon_evolucionado = (string)registros["nombre_evolucion"];
                     
                     //Quitamos duplicados
-                    var pokemon_actual = ListaPokemonMostrar.SingleOrDefault(pokemon => pokemon.Numero_pokedex == (int)registros["numero_pokedex"]);
+                    var pokemon_actual = ListaPokemonMostrar.SingleOrDefault(pokemon => pokemon.PokemonId == (int)registros["PokemonId"]);
                     if (pokemon_actual == null)
                     {
                         ListaPokemonMostrar.Add(pk);
