@@ -61,10 +61,12 @@ namespace Ejercicio3
 
             if (correcto)
             {
-                consulta = "DELETE from producto WHERE codigo= " + codigo;
+                consulta = "DELETE from producto WHERE codigo=@codigo";
 
                 SqlCommand comando = new SqlCommand(consulta, conexion);
 
+                comando.Parameters.AddWithValue("@codigo", SqlDbType.Int);
+                comando.Parameters["@codigo"].Value = codigo;
                 comando.ExecuteNonQuery();
 
                 button2.Visible = true;
